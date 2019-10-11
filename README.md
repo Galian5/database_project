@@ -4,7 +4,7 @@
 - Ruby on Rails
 - PostgreSQL
 
-# Wybrane tabele CRUD
+# Wybrane tabele do operacji CRUD
 - products
 - categories
 - suppliers

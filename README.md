@@ -2,4 +2,9 @@
 
 # Wybrane technologie
 - Ruby on Rails
-- MySQL
+- PostgreSQL
+
+# Wybrane tabele CRUD
+- products
+- categories
+- suppliers

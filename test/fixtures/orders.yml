@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  orderdate: 2019-11-28
+  requireddate: 2019-11-28
+  shippeddate: 2019-11-28
+  freight: 9.99
+  shipname: MyString
+  shipaddress: MyString
+  shipcity: MyString
+  shipregion: MyString
+  shippostalcode: MyString
+  shipcountry: MyString
+  customer: 
+
+two:
+  orderdate: 2019-11-28
+  requireddate: 2019-11-28
+  shippeddate: 2019-11-28
+  freight: 9.99
+  shipname: MyString
+  shipaddress: MyString
+  shipcity: MyString
+  shipregion: MyString
+  shippostalcode: MyString
+  shipcountry: MyString
+  customer: 

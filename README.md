@@ -45,6 +45,8 @@ def
 end
 
 I otrzymalismy dla ponizszych zapytan nastepujace wyniki:
+  (user     system      total        real)
+
   Product.all
   0.031086   0.010772   0.041858 (  0.042901)
 

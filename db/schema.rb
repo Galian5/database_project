@@ -59,14 +59,19 @@ ActiveRecord::Schema.define(version: 20191128210518) do
   end
 
   create_table "order_details", force: :cascade do |t|
+    t.bigint "order_id"
+    t.bigint "product_id"
     t.decimal "unit_price"
     t.integer "quantity"
     t.decimal "discount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_order_details_on_order_id"
+    t.index ["product_id"], name: "index_order_details_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
+    t.bigint "customer_id"
     t.date "order_date"
     t.date "required_date"
     t.date "shipped_date"
@@ -79,9 +84,12 @@ ActiveRecord::Schema.define(version: 20191128210518) do
     t.string "ship_country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
 
   create_table "products", force: :cascade do |t|
+    t.bigint "category_id"
+    t.bigint "supplier_id"
     t.string "product_name"
     t.integer "quantity_per_unit"
     t.decimal "unit_price"
@@ -91,6 +99,8 @@ ActiveRecord::Schema.define(version: 20191128210518) do
     t.boolean "discontinued"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["supplier_id"], name: "index_products_on_supplier_id"
   end
 
   create_table "shippers", force: :cascade do |t|

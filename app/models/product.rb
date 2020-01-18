@@ -4,5 +4,5 @@ class Product < ApplicationRecord
 
   validates :product_name, :quantity_per_unit,
             :unit_price, :units_in_stock, :units_on_order,
-            :reorder_level, :discontinued, presence: true
+            :reorder_level, presence: true
 end

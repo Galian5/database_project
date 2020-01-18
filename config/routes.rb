@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :employees
   resources :shippers
   resources :suppliers
+
+  root 'orders#index'
 end

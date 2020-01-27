@@ -47,14 +47,18 @@ end
 I otrzymalismy dla ponizszych zapytan nastepujace wyniki:
   (user     system      total        real)
 
-  Product.all
+  Product.all 
+  
   0.031086   0.010772   0.041858 (  0.042901)
 
-  Product.all.count
+  Product.all.count 
+  
   0.000824   0.000499   0.001323 (  0.004786)
 
   Product.where('id < 300')
+  
   0.000107   0.000007   0.000114 (  0.000112)
 
   Product.joins("INNER JOIN suppliers ON products.supplier_id = suppliers.id AND products.discontinued = false")
+  
   0.000073   0.000002   0.000075 (  0.000072)

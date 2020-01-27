@@ -24,6 +24,14 @@ class ProductsController < ApplicationController
     @product.destroy
   end
 
+  def show_pricy_products
+    @products = Product.all.where('unit_price > 60')
+  end
+
+  def check_available_products_amount
+    @products = Product.all.where('units_in_stock > 0').count
+  end
+
   private
 
   def product_params
